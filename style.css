@@ -1,0 +1,327 @@
+/* RESET & ESTILOS GENERALES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0f1412;
+  color: #e0e6e3;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 60px;
+  padding: 30px;
+  background: #17201c;
+  border-radius: 12px;
+  border: 1px solid #283830;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+/* ENCABEZADO Y TITULARES */
+.hero-header {
+  padding: 60px 20px 40px;
+  background: radial-gradient(circle, #1a2a22 0%, #0f1412 100%);
+}
+
+.tagline {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #a3b899;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-family: 'Cinzel', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #f4e8c1;
+  letter-spacing: 4px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  line-height: 1.1;
+}
+
+.sub-main-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin-top: 5px;
+}
+
+/* SECCIÓN PETICIÓN Y BOTÓN CENTRADO */
+.petition-cta-section {
+  background: transparent;
+  border: none;
+  padding: 20px 0;
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-change {
+  display: inline-block;
+  background-color: #ed2d2d;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(237, 45, 45, 0.4);
+}
+
+.btn-change:hover {
+  background-color: #c91f1f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(237, 45, 45, 0.6);
+}
+
+.cta-disclaimer {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #a3b899;
+  max-width: 600px;
+}
+
+/* CARTA ABIERTA */
+.letter-content {
+  text-align: left;
+  background: #111815;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #d4af37;
+}
+
+.letter-content p {
+  margin-bottom: 15px;
+}
+
+.letter-signature {
+  margin-top: 20px;
+  color: #d4af37;
+}
+
+/* TERMÓMETRO Y PERSONAJES */
+.thermometer-bar-container {
+  width: 100%;
+  background-color: #0b0f0e;
+  border-radius: 20px;
+  height: 30px;
+  margin: 20px 0 30px;
+  overflow: hidden;
+  border: 1px solid #283830;
+}
+
+.thermometer-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2e7d32, #4caf50);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  transition: width 1s ease-in-out;
+}
+
+.thermometer-percent {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.character-card {
+  background: #101614;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #23332a;
+}
+
+.character-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.character-info {
+  padding: 15px;
+}
+
+.character-info h3 {
+  font-size: 1.1rem;
+  color: #f4e8c1;
+  margin-bottom: 5px;
+}
+
+.voice-goal {
+  font-size: 0.85rem;
+  color: #8fa89b;
+  margin-bottom: 8px;
+}
+
+.mini-progress {
+  width: 100%;
+  height: 8px;
+  background-color: #1a2620;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mini-progress .fill {
+  height: 100%;
+  background-color: #d4af37;
+}
+
+/* DETRÁS DE LA MAGIA: VIDEOS */
+.section-description {
+  color: #a3b899;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: #101614;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #23332a;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-card h3 {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #e0e6e3;
+}
+
+/* CANALES OFICIALES DE LAIKA */
+.disclaimer-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e74c3c;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.channels-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #101614;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #23332a;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  min-width: 200px;
+}
+
+.channel-card:hover {
+  transform: translateY(-3px);
+  border-color: #d4af37;
+}
+
+.channel-icon {
+  font-size: 1.4rem;
+}
+
+/* APOYA LA PETICIÓN */
+.support-box {
+  background: #101614;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.support-box h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.support-box ul {
+  list-style-position: inside;
+  color: #c5d4cc;
+}
+
+.support-box li {
+  margin-bottom: 8px;
+}
+
+/* FOOTER */
+.main-footer {
+  padding: 30px 20px;
+  font-size: 0.85rem;
+  color: #6b7d74;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+  }
+  .sub-main-title {
+    font-size: 1.6rem;
+  }
+}
