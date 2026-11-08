@@ -5,7 +5,7 @@ const characters = [
         name: "Prue McKeel",
         actor: "Nuestra Protagonista",
         reason: "Madura, sarcástica y fan #1 de su hermano, no se acobardó cuando fue necesario demostrar que daría todo por él. Su valentía la llevó a emprender una aventura, en la cual descubrió que la magia existe y que, aún más, está dentro de ella.",
-        image: "Imagenes/Prue.jpg",
+        image: "Imagenes/Prue.png",
         goodVotes: 42,
         badVotes: 185
     },
