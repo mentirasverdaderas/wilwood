@@ -75,7 +75,7 @@ function renderCharacters() {
         const badPercent = totalVotes > 0 ? Math.round((char.badVotes / totalVotes) * 100) : 50;
 
         // Comprobar si este equipo/navegador ya votó por este personaje y qué eligió ('good' o 'bad')
-        const userVote = localStorage.getItem(`user_vote_char_${charIdSafe(char.id)}`);
+        const userVote = localStorage.getItem(`user_vote_char_${char.id}`);
 
         let goodActiveClass = (userVote === 'good') ? 'voted-active' : '';
         let badActiveClass = (userVote === 'bad') ? 'voted-active' : '';
@@ -105,11 +105,7 @@ function renderCharacters() {
     });
 }
 
-function charIdSafe(id) {
-    return id;
-}
-
-// Lógica avanzada de voto: permite emitir un voto inicial o cambiar de opinión (restando el anterior y sumando el nuevo)
+// Lógica avanzada de voto: permite emitir un voto inicial o cambiar de opinión
 function vote(charId, type) {
     const character = characters.find(c => c.id === charId);
     if (!character) return;
@@ -118,20 +114,16 @@ function vote(charId, type) {
     const previousVote = localStorage.getItem(storageKey);
 
     if (previousVote === type) {
-        // Si hace clic en la misma opción que ya había votado, no hace cambios
         return; 
     }
 
     if (previousVote === 'good') {
-        // Si antes había votado bien y ahora cambia a mal
         character.goodVotes--;
         character.badVotes++;
     } else if (previousVote === 'bad') {
-        // Si antes había votado mal y ahora cambia a bien
         character.badVotes--;
         character.goodVotes++;
     } else {
-        // Primer voto que emite este usuario
         if (type === 'good') {
             character.goodVotes++;
         } else {
@@ -139,10 +131,7 @@ function vote(charId, type) {
         }
     }
 
-    // Actualizar el registro del usuario en localStorage
     localStorage.setItem(storageKey, type);
-
-    // Refrescar tarjetas al instante
     renderCharacters();
 }
 

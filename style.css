@@ -8,9 +8,7 @@
     --text-muted: #9ba1a6;
     --border: #262d3a;
     --good: #2e7d32;
-    --good-active: #1b5e20;
     --bad: #c62828;
-    --bad-active: #8e0000;
 }
 
 * {
@@ -36,8 +34,7 @@ body {
 /* HERO SECTION */
 .hero {
     position: relative;
-    height: 70vh;
-    min-height: 450px;
+    padding: 100px 20px 80px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,52 +48,60 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(11,13,16,0.6), rgba(11,13,16,0.95));
+    background: linear-gradient(to bottom, rgba(11,13,16,0.7), rgba(11,13,16,0.95));
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
-    padding: 0 20px;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .badge {
     display: inline-block;
     background-color: rgba(212, 175, 55, 0.15);
     color: var(--accent);
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .hero h1 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    letter-spacing: 2px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.25;
+    letter-spacing: 1px;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--text-muted);
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons.center-btn {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 /* BOTONES */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 6px;
+    padding: 14px 28px;
+    border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -113,69 +118,9 @@ body {
     transform: translateY(-2px);
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--text-main);
-    border: 1px solid var(--border);
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.btn-secondary:hover {
-    background-color: var(--border);
-}
-
-/* BANNER DE FIRMAS */
-.signatures-banner {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 30px;
-    margin: 50px auto;
-    position: relative;
-    z-index: 3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.signatures-info {
-    max-width: 650px;
-}
-
-.signatures-info h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-    color: var(--accent);
-}
-
-.signatures-info p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.btn-sig {
-    background-color: #ff4500;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s;
-    display: inline-block;
-}
-
-.btn-sig:hover {
-    background-color: #e03d00;
-}
-
-/* MANIFIESTO */
+/* SEPARACIÓN CORRECTA ANTES DE LA CARTA ABIERTA */
 .manifesto-section {
-    margin: 50px 0;
+    margin: 80px 0 60px 0;
 }
 
 .manifesto-section h2 {
@@ -199,6 +144,56 @@ body {
 
 .manifesto-card p:last-child {
     margin-bottom: 0;
+}
+
+/* BANNER DE FIRMAS */
+.signatures-banner {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 35px;
+    margin: 60px auto;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.signatures-info {
+    max-width: 650px;
+}
+
+.signatures-info h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.signatures-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.btn-sig {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn-sig:hover {
+    background-color: #e03d00;
 }
 
 /* SECCIÓN DE VOTACIÓN */
@@ -236,22 +231,22 @@ body {
     flex-direction: column;
 }
 
+/* IMÁGENES FIJAS - NO SE AGRANDAN NI DEFORMAN */
 .char-img-container {
     width: 100%;
-    height: 200px;
-    background-color: #202634;
+    height: 220px;
+    background-color: #0b0d10;
     overflow: hidden;
+    position: relative;
 }
 
 .char-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.char-card:hover .char-img-container img {
-    transform: scale(1.03);
+    display: block;
+    transform: none !important; /* Fuerza a que nunca se expandan */
+    transition: none !important;
 }
 
 .char-info {
@@ -262,7 +257,7 @@ body {
 .char-info h3 {
     font-family: 'Cinzel', serif;
     font-size: 1.25rem;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .char-actor {
@@ -270,6 +265,7 @@ body {
     color: var(--accent);
     margin-bottom: 12px;
     display: block;
+    font-weight: 600;
 }
 
 .char-reason {
@@ -280,11 +276,11 @@ body {
 /* BOTONES DE VOTO DENTRO DE LA TARJETA */
 .voting-actions {
     padding: 15px 20px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.25);
     border-top: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .vote-buttons {
@@ -294,7 +290,7 @@ body {
 
 .v-btn {
     flex: 1;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid transparent;
     border-radius: 6px;
     font-weight: 600;
@@ -317,7 +313,6 @@ body {
 .v-btn.voted-active {
     border: 2px solid #fff;
     box-shadow: 0 0 10px rgba(255,255,255,0.4);
-    transform: scale(1.02);
 }
 
 .v-btn:hover {
@@ -385,21 +380,21 @@ body {
     height: 100%;
 }
 
-/* SECCIÓN DE CANALES OFICIALES */
+/* SECCIÓN DE CANALES OFICIALES - REDISEÑADA Y ELEGANTE */
 .official-channels-section {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .official-channels-section h2 {
     font-family: 'Cinzel', serif;
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .channels-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
@@ -407,21 +402,52 @@ body {
     background-color: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 25px;
-    text-align: center;
+    padding: 30px;
 }
 
 .channel-column h3 {
     font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     color: var(--accent);
     margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
 }
 
 .channel-links {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.channel-link-item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.channel-link-item:hover {
+    background-color: rgba(212, 175, 55, 0.08);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.link-title {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.link-url {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 2px;
 }
 
 /* FOOTER */
